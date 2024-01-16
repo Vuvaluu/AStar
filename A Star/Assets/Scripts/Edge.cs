@@ -6,7 +6,8 @@ public class Edge : MonoBehaviour
 {
    Node _from;
    Node _to;
-   int cost;
+   int _cost;
+   bool _traversed;
 
    public Edge(ref Node from, ref Node to)
    {
@@ -14,16 +15,16 @@ public class Edge : MonoBehaviour
         _to = to;
    }
 
-   public Edge()
-   {
-
-   }
-
-   public void setEdge(ref Node from, ref Node to)
+   public void setEdges(ref Node from, ref Node to)
    {
         _from = from;
         _to = to;
    }
+
+    public void setCost(int cost)
+    {
+        _cost = cost;
+    }
 
    public Node getNodeFrom()
    {
